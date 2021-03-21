@@ -1,0 +1,18 @@
+var N = null;var sourcesIndex = {};
+sourcesIndex["bstr"] = {"name":"","dirs":[{"name":"byteset","files":["mod.rs","scalar.rs"]},{"name":"search","files":["byte_frequencies.rs","mod.rs","prefilter.rs","twoway.rs"]},{"name":"unicode","dirs":[{"name":"fsm","files":["grapheme_break_fwd.rs","grapheme_break_rev.rs","mod.rs","regional_indicator_rev.rs","sentence_break_fwd.rs","simple_word_fwd.rs","whitespace_anchored_fwd.rs","whitespace_anchored_rev.rs","word_break_fwd.rs"]}],"files":["grapheme.rs","mod.rs","sentence.rs","whitespace.rs","word.rs"]}],"files":["ascii.rs","bstr.rs","bstring.rs","cow.rs","ext_slice.rs","ext_vec.rs","impls.rs","io.rs","lib.rs","utf8.rs"]};
+sourcesIndex["byteorder"] = {"name":"","files":["lib.rs"]};
+sourcesIndex["csv"] = {"name":"","files":["byte_record.rs","cookbook.rs","deserializer.rs","error.rs","lib.rs","reader.rs","serializer.rs","string_record.rs","tutorial.rs","writer.rs"]};
+sourcesIndex["csv_core"] = {"name":"","files":["lib.rs","reader.rs","writer.rs"]};
+sourcesIndex["itoa"] = {"name":"","files":["lib.rs"]};
+sourcesIndex["lazy_static"] = {"name":"","files":["inline_lazy.rs","lib.rs"]};
+sourcesIndex["memchr"] = {"name":"","dirs":[{"name":"x86","files":["avx.rs","mod.rs","sse2.rs"]}],"files":["fallback.rs","iter.rs","lib.rs","naive.rs"]};
+sourcesIndex["payments_engine"] = {"name":"","files":["main.rs"]};
+sourcesIndex["proc_macro2"] = {"name":"","files":["detection.rs","fallback.rs","lib.rs","marker.rs","parse.rs","wrapper.rs"]};
+sourcesIndex["quote"] = {"name":"","files":["ext.rs","format.rs","ident_fragment.rs","lib.rs","runtime.rs","spanned.rs","to_tokens.rs"]};
+sourcesIndex["regex_automata"] = {"name":"","files":["classes.rs","dense.rs","dfa.rs","lib.rs","regex.rs","sparse.rs","state_id.rs"]};
+sourcesIndex["ryu"] = {"name":"","dirs":[{"name":"buffer","files":["mod.rs"]},{"name":"pretty","files":["exponent.rs","mantissa.rs","mod.rs"]}],"files":["common.rs","d2s.rs","d2s_full_table.rs","d2s_intrinsics.rs","digit_table.rs","f2s.rs","f2s_intrinsics.rs","lib.rs"]};
+sourcesIndex["serde"] = {"name":"","dirs":[{"name":"de","files":["ignored_any.rs","impls.rs","mod.rs","seed.rs","utf8.rs","value.rs"]},{"name":"private","files":["de.rs","doc.rs","mod.rs","ser.rs","size_hint.rs"]},{"name":"ser","files":["fmt.rs","impls.rs","impossible.rs","mod.rs"]}],"files":["integer128.rs","lib.rs","macros.rs"]};
+sourcesIndex["serde_derive"] = {"name":"","dirs":[{"name":"internals","files":["ast.rs","attr.rs","case.rs","check.rs","ctxt.rs","mod.rs","receiver.rs","respan.rs","symbol.rs"]}],"files":["bound.rs","de.rs","dummy.rs","fragment.rs","lib.rs","pretend.rs","ser.rs","try.rs"]};
+sourcesIndex["syn"] = {"name":"","dirs":[{"name":"gen","files":["clone.rs","gen_helper.rs"]}],"files":["attr.rs","await.rs","bigint.rs","buffer.rs","custom_keyword.rs","custom_punctuation.rs","data.rs","derive.rs","discouraged.rs","error.rs","export.rs","expr.rs","ext.rs","generics.rs","group.rs","ident.rs","lib.rs","lifetime.rs","lit.rs","lookahead.rs","mac.rs","macros.rs","op.rs","parse.rs","parse_macro_input.rs","parse_quote.rs","path.rs","print.rs","punctuated.rs","sealed.rs","span.rs","spanned.rs","thread.rs","token.rs","ty.rs","verbatim.rs"]};
+sourcesIndex["unicode_xid"] = {"name":"","files":["lib.rs","tables.rs"]};
+createSourceSidebar();
