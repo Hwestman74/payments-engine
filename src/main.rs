@@ -65,6 +65,7 @@ fn process_transaction(
         }
     };
 
+    // Match against transaction in order to determine how to update the account 
     match transaction {
         Transaction {
             client: _,
@@ -196,7 +197,7 @@ fn parse_accounts_csv(mut csv: String) -> Vec<Account> {
     data
 }
 
-///
+/// Represents a transaction. 
 struct Transaction {
     client: u16,
     tx: u32,
@@ -205,9 +206,9 @@ struct Transaction {
 
 impl Transaction {
     /// This function creates a Transaction instance from a string line representing one row
-    /// in the csv.
+    /// in the transaction.csv and drops it.
     fn new(mut s: String) -> Option<Transaction> {
-        s.retain(|c| c != ' ');
+        s.retain(|c| c != ' '); //Remove whitespaces
         let row: Vec<&str> = s.split(",").collect();
         let transaction_type = row[0];
         let client_id = row[1].parse::<u16>();
