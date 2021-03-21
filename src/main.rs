@@ -191,8 +191,10 @@ fn parse_accounts_csv(mut csv: String) -> Vec<Account> {
     let mut accounts: Vec<Account> = vec![];
     let mut reader = csv::Reader::from_reader(csv.as_bytes());
     for row in reader.deserialize() {
-        let field: Account = row.unwrap();
-        accounts.push(field)
+        // Ignore rows which cannot be parsed into an account
+        if let Ok(account) = row{
+            accounts.push(account)
+        }
     }
     accounts
 }
