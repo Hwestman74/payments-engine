@@ -1,5 +1,0 @@
-(function() {var implementors = {};
-implementors["bstr"] = [{"text":"impl Index&lt;usize&gt; for BStr","synthetic":false,"types":[]},{"text":"impl Index&lt;RangeFull&gt; for BStr","synthetic":false,"types":[]},{"text":"impl Index&lt;Range&lt;usize&gt;&gt; for BStr","synthetic":false,"types":[]},{"text":"impl Index&lt;RangeInclusive&lt;usize&gt;&gt; for BStr","synthetic":false,"types":[]},{"text":"impl Index&lt;RangeFrom&lt;usize&gt;&gt; for BStr","synthetic":false,"types":[]},{"text":"impl Index&lt;RangeTo&lt;usize&gt;&gt; for BStr","synthetic":false,"types":[]},{"text":"impl Index&lt;RangeToInclusive&lt;usize&gt;&gt; for BStr","synthetic":false,"types":[]}];
-implementors["csv"] = [{"text":"impl Index&lt;usize&gt; for ByteRecord","synthetic":false,"types":[]},{"text":"impl Index&lt;usize&gt; for StringRecord","synthetic":false,"types":[]}];
-implementors["syn"] = [{"text":"impl&lt;T, P&gt; Index&lt;usize&gt; for Punctuated&lt;T, P&gt;","synthetic":false,"types":[]}];
-if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
