@@ -1,8 +1,5 @@
 
 use serde::{Deserialize, Serialize};
-use std::env;
-use std::fs;
-use std::fs::File;
 use std::io::{BufRead, BufReader};
 
 fn main() -> Result<(), std::io::Error> {
@@ -10,11 +7,11 @@ fn main() -> Result<(), std::io::Error> {
     let mut accounts = get_existing_accounts_data_from_file();
 
     // We find the path to the transactions.csv file in args[1]
-    let args: Vec<String> = env::args().collect();
+    let args: Vec<String> = std:: env::args().collect();
     let transaction_path = &args[1];
 
     // Set up a BufReader to read in transactions.csv file bit by bit
-    let file = File::open(transaction_path)?;
+    let file = std::fs::File::open(transaction_path)?;
     let reader = BufReader::new(file);
 
     // We need to track of processed transactions inorder to check old amounts for
@@ -175,7 +172,7 @@ fn chargeback(account: &mut Account, amount: f32) {
 /// If nothing is found we create an empty accounts record
 fn get_existing_accounts_data_from_file() -> Vec<Account> {
     let accounts: Vec<Account>;
-    match fs::read_to_string("accounts.csv") {
+    match std::fs::read_to_string("accounts.csv") {
         Ok(csv) => accounts = parse_accounts_csv(csv),
         Err(_) => {
             return vec![];
