@@ -185,16 +185,16 @@ fn get_existing_accounts_data_from_file() -> Vec<Account> {
     accounts
 }
 
-///
+/// Creates a Vec<Account> from csv and then drops the csv string
 fn parse_accounts_csv(mut csv: String) -> Vec<Account> {
     csv.retain(|c| c != ' '); // Take out whitespaces
-    let mut data: Vec<Account> = vec![];
+    let mut accounts: Vec<Account> = vec![];
     let mut reader = csv::Reader::from_reader(csv.as_bytes());
     for row in reader.deserialize() {
         let field: Account = row.unwrap();
-        data.push(field)
+        accounts.push(field)
     }
-    data
+    accounts
 }
 
 /// Represents a transaction. 
