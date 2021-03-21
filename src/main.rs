@@ -1,13 +1,13 @@
-
 use serde::{Deserialize, Serialize};
 use std::io::{BufRead, BufReader};
 
 fn main() -> Result<(), std::io::Error> {
+
     // First we try to read in any existing accounts information from file.
     let mut accounts = get_existing_accounts_data_from_file();
 
     // We find the path to the transactions.csv file in args[1]
-    let args: Vec<String> = std:: env::args().collect();
+    let args: Vec<String> = std::env::args().collect();
     let transaction_path = &args[1];
 
     // Set up a BufReader to read in transactions.csv file bit by bit
@@ -62,7 +62,7 @@ fn process_transaction(
         }
     };
 
-    // Match against transaction in order to determine how to update the account 
+    // Match against transaction in order to determine how to update the account
     match transaction {
         Transaction {
             client: _,
@@ -189,14 +189,14 @@ fn parse_accounts_csv(mut csv: String) -> Vec<Account> {
     let mut reader = csv::Reader::from_reader(csv.as_bytes());
     for row in reader.deserialize() {
         // Ignore rows which cannot be parsed into an account
-        if let Ok(account) = row{
+        if let Ok(account) = row {
             accounts.push(account)
         }
     }
     accounts
 }
 
-/// Represents a transaction. 
+/// Represents a transaction.
 struct Transaction {
     client: u16,
     tx: u32,
@@ -209,6 +209,10 @@ impl Transaction {
     fn new(mut s: String) -> Option<Transaction> {
         s.retain(|c| c != ' '); //Remove whitespaces
         let row: Vec<&str> = s.split(",").collect();
+        if row.len() != 4{
+            return None;
+        }
+
         let transaction_type = row[0];
         let client_id = row[1].parse::<u16>();
         let tx_id = row[2].parse::<u32>();
